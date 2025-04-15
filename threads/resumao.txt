@@ -1,0 +1,5 @@
+Threads é sempre bom quando há a entrada de e saida de dados, 
+podendo ser por através do usuário ou sistemas externos como API´S ou baanco de dados
+Isso é chamado de I/O-bound(input/output)
+
+

@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  server:
+    build: .
+    ports:
+      - "8888:8888"
+    command: python server.py
+    networks:
+      - socket-network
+
+  client:
+    build: .
+    command: python client.py server
+    networks:
+      - socket-network
+    depends_on:
+      - server
+
+networks:
+  socket-network:
+    driver: bridge
